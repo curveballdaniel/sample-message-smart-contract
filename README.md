@@ -6,4 +6,4 @@ This includes some frontend with HTML, CSS, and JavaScript to tie things togethe
 
 This page does require MetaMask in order to properly communicate with the contract.
 
-As of right now, the smart contract runs solely on Ropsten. It will probably be migrated to mainnet at some point.
+As of right now, the contract runs solely on Ropsten. It will probably be migrated to mainnet at some point.
