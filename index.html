@@ -1,0 +1,192 @@
+<style>
+
+body {
+  background-image: url("img/paper-and-pencil.jpg");
+  background-size: 100% 100%;
+  font-family: Georgia, serif;
+}
+
+/*
+
+color scheme - (* means not used)
+
+gray: #d2d2d2;
+light blue: #03a9f4;
+alt dark blue: #0082bd;
+
+* title purple: #464349; (deep purple)
+* mini text purple: #03a9f4; (light purple)
+
+small text gray: #7b5ab5; (notebook gray)
+
+input:
+light blue: #5bccff;
+* purple: #711ebd; 
+white: white;
+
+*/
+
+/* universal formatting */
+
+.title-header {
+  font-size: 1.25em;
+  color: #464349;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+}
+
+/* contracts/link in bottom right */
+.mini-text {
+  font-size: 10px;
+  color: #03a9f4;
+}
+
+.small-text {
+  font-size: 0.75em;
+  color: #5bccff;
+  font-weight: 700;
+  margin: 0 0 0 0;
+}
+
+/* main text on the top lefthand side */
+.main-text {
+  position: fixed;
+  top: 40%;
+  left: 50px;
+  width: 750px;
+}
+
+.main-text .title {
+  font-size: 2.45em;
+  color: #0082bd;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+}
+
+/* input message field */
+
+.input-message-div {
+  position: fixed;
+  bottom: 10%;
+  left: 50px;
+  width: 750px;
+}
+
+
+/* side text on right hand side */
+.side-text {
+  position: fixed;
+  bottom: 120px;
+  right: 140px;
+  width: 450px;
+}
+
+.side-text .title {
+  font-size: 1.85em;
+  color: #03a9f4;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+  text-align: right;
+}
+
+.side-text .title-header {
+  font-size: 0.95em;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+}
+
+.side-text #message {
+  font-size: 1em;
+  color: white;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+}
+
+.side-text .bubbly-button {
+  left: 35%;
+}
+
+/* for far bottom/right corner text */
+.corner-text {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 450px;
+}
+
+.text-log {
+  font-size: 10px;
+  color: white;
+  margin: 0 0 0 0;
+
+  /* for scroll bar */
+  height: 60px;
+  overflow: auto;
+}
+
+/* for input message box*/
+
+#input-container {
+  display: grid;
+  font-family: Avenir;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+</style>
+
+<script src="/js/web3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<div class="main-text">
+  <p class="title">Want to save a message on the blockchain?</p>
+  <p class="title-header">Immutable, Secure, Safe, and only YOU can read it</p>
+  <p class="small-text">A completely unsensorable piece of text: a secret message, a will, coordinates, anything!</p>
+</div>
+
+<div class="input-message-div">
+  <p class="title-header">Input new message below: </p>
+  
+  <div id="input-container">  
+    <label for="inp" class="inp">
+      <input type="text" id="input-message" placeholder="&nbsp;">
+      <span class="label">Message: </span>
+      <span class="border"></span>
+    </label>
+  </div>
+
+  <br/>
+
+  <button class="bubbly-button" id="change-message">Save Message</button>
+</div>
+
+
+<div class="side-text">
+  <p class="title">View your message here: </p>
+  <p class="title-header">Your message: <span id="message"></span></p>
+  <button class="bubbly-button" id="get-message">Get Your Message</button>
+  <br/><br/>
+  
+</div>
+
+<div class="corner-text">
+  <div class="text-log" id="log"></div>
+  <p class="mini-text">Contract Address: </p>
+  <p class="mini-text">Source Code: </p>
+</div>
+
+<!-- 
+update contract add + source code
+
+host website
+migrate to mainnet
+-->
+
+<script src="js/contract.js"></script>
+
+<!-- input box css + js -->
+<link rel="stylesheet" href="css/input-box.css">
+
+<!-- button css + js -->
+<link rel="stylesheet" href="css/button.css">
+<script src="js/button.js"></script>
