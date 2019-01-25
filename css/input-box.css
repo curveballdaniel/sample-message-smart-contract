@@ -22,7 +22,7 @@
   left: 0;
   height: 2px;
   width: 100%;
-  background: #5bccff;
+  background: white;
   transform: scaleX(0);
   transform-origin: 0 0;
   transition: all 0.15s ease;

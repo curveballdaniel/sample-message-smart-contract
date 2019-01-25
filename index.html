@@ -35,6 +35,21 @@ white: white;
   margin: 0 0 0.55em 0;
 }
 
+/* top left text */
+.top-left-text {
+  position: fixed;
+  top: 10%;
+  left: 3%;
+  width: 750px;
+}
+
+.top-left-text .title {
+  font-size: 2.45em;
+  color: #0082bd;
+  font-weight: 700;
+  margin: 0 0 0.55em 0;
+}
+
 /* contracts/link in bottom right */
 .mini-text {
   font-size: 10px;
@@ -43,7 +58,7 @@ white: white;
 
 .small-text {
   font-size: 0.75em;
-  color: #5bccff;
+  color: white;
   font-weight: 700;
   margin: 0 0 0 0;
 }
@@ -52,23 +67,15 @@ white: white;
 .main-text {
   position: fixed;
   top: 40%;
-  left: 50px;
+  left: 3%;
   width: 750px;
 }
 
-.main-text .title {
-  font-size: 2.45em;
-  color: #0082bd;
-  font-weight: 700;
-  margin: 0 0 0.55em 0;
-}
-
 /* input message field */
-
 .input-message-div {
   position: fixed;
   bottom: 10%;
-  left: 50px;
+  left: 3%;
   width: 750px;
 }
 
@@ -138,10 +145,12 @@ white: white;
 <script src="/js/web3.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+<div class="top-left-text">
+  <p class="title">Want to save a secret message on the blockchain?</p>
+  <p class="title-header">Immutable, Secure, and only YOU can read it!</p>
+</div>
+
 <div class="main-text">
-  <p class="title">Want to save a message on the blockchain?</p>
-  <p class="title-header">Immutable, Secure, Safe, and only YOU can read it</p>
-  <p class="small-text">A completely unsensorable piece of text: a secret message, a will, coordinates, anything!</p>
 </div>
 
 <div class="input-message-div">
@@ -154,6 +163,8 @@ white: white;
       <span class="border"></span>
     </label>
   </div>
+
+  <p class="small-text" style="margin-top: 3px;">Completely private, unsensorable text: a secret message, a will, coordinates, anything!</p>
 
   <br/>
 
@@ -172,11 +183,11 @@ white: white;
 <div class="corner-text">
   <div class="text-log" id="log"></div>
   <p class="mini-text">Contract Address: </p>
-  <p class="mini-text">Source Code: </p>
+  <p class="mini-text">Source Code: <a href="https://github.com/curveballdaniel/sample-message-smart-contract">https://github.com/curveballdaniel/sample-message-smart-contract</a></p>
 </div>
 
 <!-- 
-update contract add + source code
+update contract add
 
 host website
 migrate to mainnet
